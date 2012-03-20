@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+import os, sys
+
+infilename = sys.argv[1]
+outfilename = sys.argv[2]
+with open(infilename,'rb') as infile:
+    contents = infile.read()
+
+for k,v in os.environ.iteritems():
+    contents=contents.replace('$%s'%k,v)
+
+with open(outfilename,'wb') as outfile:
+    outfile.write(contents)

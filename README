@@ -1,0 +1,13 @@
+Simple scripts to make deployments easier.
+Generally designed to be used with Fabric in Unixy environments
+
+expand_evars
+------------
+Usage: expand_evars <input filename> <output filename>
+
+Handy for expanding the value of environment values in configuration files that are pulled from version control
+
+Example:
+
+    expand_evars source/supervisord.ini.tmpl deploy/supervisord.ini
+
